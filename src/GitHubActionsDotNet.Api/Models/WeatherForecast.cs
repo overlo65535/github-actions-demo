@@ -1,5 +1,7 @@
 namespace GitHubActionsDotNet.Api.Models;
-
+/// <summary>
+/// Represents a weather forecast with date, temperature, and summary.
+/// </summary>
 public record WeatherForecast
 {
     public DateOnly Date { get; init; }
