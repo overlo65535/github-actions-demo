@@ -1,4 +1,4 @@
-﻿name: CI
+name: Cron example
 on:
   schedule:
     - cron: '*/5 * * * *'
