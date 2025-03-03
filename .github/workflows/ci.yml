@@ -1,4 +1,4 @@
-﻿name: CI
+﻿name: CI-CD
 on:
   push:
     branches: [ "main" ]
@@ -26,3 +26,21 @@ jobs:
         with:
           name: app-artifacts
           path: artifacts/
+
+  deploy_dev:
+    name: Deploy to dev
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: app-artifacts
+          path: artifacts/
+
+      # Deploy to Azure Web apps
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: app-gitactions-demo-dev
+          package: artifacts/
