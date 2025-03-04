@@ -8,6 +8,11 @@ on:
         required: true
         default: "dev"
         type: string
+      artifact:
+        description: "Artifact to deploy"
+        required: true
+        type: string
+        default: "app-artifacts"
     secrets:
       AZURE_CLIENT_ID:
         description: "Azure client ID"
@@ -28,7 +33,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          name: app-artifacts
+          name: ${{ inputs.artifact }}
           path: artifacts/
 
       - name: Azure login
