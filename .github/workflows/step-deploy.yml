@@ -10,7 +10,7 @@ on:
         type: string
       artifact:
         description: "Artifact to deploy"
-        required: true
+        #required: true
         type: string
         default: "app-artifacts"
     secrets:
