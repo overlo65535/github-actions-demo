@@ -35,9 +35,10 @@ jobs:
 
     name: Deploy to dev
     needs: build
-    uses: ./.github/workflows/step-deploy.yml
+    uses: overlo65535/github-actions-demo/./.github/workflows/step-deploy.yml@main # Reusable workflow which can live in a separate repository and shared across multiple repositories
     with:
       env: dev
+      #artifact: "app-artifacts"
     secrets: inherit
 
 #  deploy_prod:
