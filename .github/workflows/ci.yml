@@ -35,10 +35,12 @@ jobs:
 
     name: Deploy to dev
     needs: build
-    uses: overlo65535/github-actions-demo/.github/workflows/step-deploy.yml@main # Reusable workflow which can live in a separate repository and shared across multiple repositories
+    #uses: overlo65535/github-actions-demo/.github/workflows/step-deploy.yml@main # Reusable workflow which can live in a separate repository and shared across multiple repositories
+    uses: ./.github/workflows/step-deploy.yml
     with:
       env: dev
       artifact: "app-artifacts"
+      resource_group_name: "rg-gitactions-demo-dev"
     secrets: inherit
 
 #  deploy_prod:
