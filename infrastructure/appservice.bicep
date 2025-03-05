@@ -10,7 +10,7 @@ var appServiceProperties = {
   siteConfig: {
     http20Enabled: true
     linuxFxVersion: 'DOTNETCORE|8.0'
-    alwaysOn: true
+    alwaysOn: false // F1 doesn't support AlwaysOn
     ftpsState: 'Disabled'
     minTlsVersion: '1.2'
     webSocketsEnabled: true
