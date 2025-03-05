@@ -8,7 +8,7 @@ targetScope = 'resourceGroup'
 module app './appservice.bicep' = {
   name: 'appservice'
   params: {
-    appName: 'app-gitactions-demo'
+    appName: 'gitactions-demo'
     environment: environment
     location: location
   }
