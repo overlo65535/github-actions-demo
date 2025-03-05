@@ -40,7 +40,7 @@ jobs:
     with:
       env: dev
       artifact: "app-artifacts"
-      resource_group_name: "rg-gitactions-demo-dev"
+      resource_group_name: "rg-git-actions-demo-dev"
     secrets: inherit
 
 #  deploy_prod:
